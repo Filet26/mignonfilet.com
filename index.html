@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="Assets/Images/meat.ico" />
     <link rel="stylesheet" href="CSS/index.css" />
-    <script src="Scripts/script.js"></script>
+    <script defer src="Scripts/script.js"></script>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,6 +25,18 @@
   </head>
   <!-- Header ends -->
   <body>
-    <h1 class="progressH1">In Progress...&#127789;</h1>
+    <div class="fixed_div">
+      <h1 class="progressH1">In Progress...&#127789;</h1>
+    </div>
+    <div class="temp1"></div>
+
+    <div class="fixed_div">
+      <button id="meatbuttongrow">Make Steak Grow</button>
+      <button id="meatbuttonsmall">Make Steak Smaller</button>
+    </div>
+    <div class="temp1"></div>
+    <div class="meatdiv">
+      <img id="meatmain" src="/Assets/Images/meat.png" alt="Meat" />
+    </div>
   </body>
 </html>
