@@ -1,2 +1,5 @@
 # mignonfilet.com
-Website for my Doman, Just for fun!
+
+### Website for my Domain, Just for fun!
+
+**Cost me 17 bucks** :hamburger:
