@@ -1,20 +1,31 @@
 /* Main CSS */
+
+:root {
+  --grey: rgb(110, 110, 110);
+  --blue-dark: rgb(0, 40, 80);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Roboto", sans-serif;
-  background-image: url("../Assets/Images/blkstr.jpg");
-  background-size: stretch;
+  /* background-image: url("../Assets/Images/blkstr.jpg"); */
+  background-size: cover;
   overflow: overlay;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 
   /* box */
-  display: flex;
+  /* display: flex;
   justify-content: center;
   align-items: center;
   height: 50vh;
 
   flex-wrap: wrap;
-  flex: 0 0 50px;
+  flex: 0 0 50px; */
 }
 
 .progressH1 {
@@ -55,9 +66,9 @@ body {
   transition: 1s;
 }
 /* Scroll Bar END =====================================*/
-
+/* 
 /* MEAT */
-#meatmain {
+/* #meatmain {
   width: 100px;
 }
 
@@ -74,4 +85,63 @@ body {
 .fixed_div {
   height: 20vh;
   margin: 0;
+}
+
+/* Navbar */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 30px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  transition: 100ms;
+}
+
+.nav-links {
+  position: absolute;
+  right: 0;
+  top: 5vh;
+  width: 60%;
+  height: 70vh;
+  background: black;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: menu_animation 500ms;
+}
+
+@keyframes menu_animation {
+  /* yessir */
+}
+
+.logo {
+  text-decoration: none;
+  font-family: "Montserrat";
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--grey);
+  transition: 250ms;
+}
+
+header ul li {
+  list-style: none;
+  margin: 20px 0;
+}
+
+header ul li a {
+  text-decoration: none;
+  font-family: "Montserrat";
+  font-weight: 700;
+  padding: 10px 30px;
+  font-size: 1rem;
+  color: var(--grey);
+  transition: 250ms;
+}
+
+header ul li a:hover {
+  color: var(--blue-dark);
 }
