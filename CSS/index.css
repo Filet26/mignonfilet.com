@@ -5,25 +5,18 @@
   box-sizing: border-box;
 }
 :root {
+  --white: rgb(255, 255, 255);
   --grey: rgb(110, 110, 110);
   --blue-dark: rgb(0, 40, 80);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   /* font-family: "Roboto", sans-serif; */
-  background-image: url("../Assets/Images/blkstr.jpg");
-  background-size: cover;
   overflow: overlay;
-
-  /* box */
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-
-
-  flex-wrap: wrap;
-  flex: 0 0 50px; */
-
   height: 150vh;
 }
 
@@ -37,10 +30,10 @@ body {
 
 /* HIGHLIGHT */
 ::selection {
-  background: #c3ff00; /* WebKit/Blink Browsers */
+  background: #ffffff; /* WebKit/Blink Browsers */
 }
 ::-moz-selection {
-  background: #c3ff00; /* Gecko Browsers */
+  background: #ffffff; /* Gecko Browsers */
 }
 
 /* Scroll Bar =====================================*/
@@ -66,26 +59,6 @@ body {
   transition: 1s;
 }
 /* Scroll Bar END =====================================*/
-/* 
-/* MEAT */
-/* #meatmain {
-  width: 100px;
-}
-
-.temp1 {
-  flex-basis: 100%;
-  height: 0;
-  height: 1vh;
-}
-
-/* .meatdiv {
-  pog
-} */
-
-/* .fixed_div {
-  height: 20vh;
-  margin: 0;
-} */
 
 /* Navbar */
 header {
@@ -96,7 +69,7 @@ header {
   position: fixed;
   width: 100%;
   top: 0;
-  transition: 100ms;
+  transition: 300ms;
   z-index: 2;
 }
 
@@ -124,7 +97,7 @@ header {
   top: 5vh;
   width: 60%;
   height: 70px;
-  background: black;
+  background: rgb(255, 255, 255);
 
   display: none;
   flex-direction: column;
@@ -154,7 +127,7 @@ header {
   font-family: "Montserrat";
   font-size: 1rem;
   font-weight: 700;
-  color: var(--grey);
+  color: black;
   transition: 250ms;
 }
 
@@ -165,16 +138,17 @@ header ul li {
 
 header ul li a {
   text-decoration: none;
-  font-family: "Montserrat";
-  font-weight: 700;
+  font-family: "IBM Plex Mono";
+  font-weight: 600;
   padding: 10px 30px;
   font-size: 1rem;
-  color: var(--grey);
-  transition: 250ms;
+  color: black;
+  transition: 250ms ease-in-out;
 }
 
 header ul li a:hover {
   color: var(--blue-dark);
+  border-bottom: 3px solid #000000;
 }
 
 .menu-hamburger {
@@ -220,9 +194,67 @@ header ul li a:hover {
   header ul li a {
     padding: 0;
     margin: 5px 10px;
-    font-size: 0.8em;
+    font-size: 1.2em;
+  }
+
+  .logo {
+    font-size: 1.8em;
   }
   .menu-hamburger {
     display: none;
   }
 }
+
+/* showcase */
+
+.mainback {
+  width: 100vw;
+  height: 100vh;
+  background: #ebe7e4;
+  /* background-image: url("https://images.pexels.com/photos/3028961/pexels-photo-3028961.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"); */
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.secondary {
+  height: 100vh;
+}
+
+/* FOOTER */
+footer {
+  color: beige;
+  background-color: rgb(0, 0, 0);
+  height: 20vh;
+}
+/* FOOTER END */
+
+/* TYPING */
+.typing-text {
+  width: 15rem;
+  animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  padding-right: 1rem;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 2em;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* MAIN END */
+
+/* GKJ START */
