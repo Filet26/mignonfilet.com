@@ -1,41 +1,45 @@
 /* Main CSS */
-body {
-  font-family: "Roboto", sans-serif;
-  background-image: url("../Assets/Images/blkstr.jpg");
-  background-size: stretch;
-  overflow: overlay;
+* {
   margin: 0;
   padding: 0;
-
-  /* box */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50vh;
-
-  flex-wrap: wrap;
-  flex: 0 0 50px;
+  box-sizing: border-box;
+}
+:root {
+  --white: rgb(255, 255, 255);
+  --grey: rgb(110, 110, 110);
+  --blue-dark: rgb(0, 40, 80);
 }
 
-.progressH1 {
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  /* font-family: "Roboto", sans-serif; */
+  overflow: overlay;
+  height: 150vh;
+}
+
+/* .progressH1 {
   color: rgb(0, 0, 0);
   background-color: rgb(255, 255, 255);
   padding: 1rem;
   border: 3px solid #c3ff00;
-}
+
+
 
 /* HIGHLIGHT */
 ::selection {
-  background: #c3ff00; /* WebKit/Blink Browsers */
+  background: #ffffff; /* WebKit/Blink Browsers */
 }
 ::-moz-selection {
-  background: #c3ff00; /* Gecko Browsers */
+  background: #ffffff; /* Gecko Browsers */
 }
 
 /* Scroll Bar =====================================*/
 /* width */
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 8px;
 }
 
 /* Track */
@@ -45,7 +49,7 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgba(253, 253, 253, 0.712);
+  background: rgba(253, 253, 253, 0.512);
   border-radius: 2rem;
 }
 
@@ -56,22 +60,201 @@ body {
 }
 /* Scroll Bar END =====================================*/
 
-/* MEAT */
-#meatmain {
-  width: 100px;
+/* Navbar */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 30px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  transition: 300ms;
+  z-index: 2;
 }
 
-.temp1 {
-  flex-basis: 100%;
-  height: 0;
-  height: 1vh;
+.sticky {
+  background: rgba(255, 255, 255, 0.75);
+  box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.723);
+  backdrop-filter: blur(20px);
 }
 
-/* .meatdiv {
-  pog
-} */
+.sticky a {
+  color: var(--grey);
+}
 
-.fixed_div {
+.stick .logo {
+  color: inherit;
+}
+
+.sticky li a:hover {
+  color: var(--blue-dark);
+}
+
+.nav-links {
+  position: absolute;
+  right: 0;
+  top: 5vh;
+  width: 60%;
+  height: 70px;
+  background: rgb(255, 255, 255);
+
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: menu_animation 250ms ease-in-out;
+}
+
+.show-nav-links {
+  display: flex;
+  height: 70vh;
+}
+
+@keyframes menu_animation {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+.logo {
+  text-decoration: none;
+  font-family: "Montserrat";
+  font-size: 1rem;
+  font-weight: 700;
+  color: black;
+  transition: 250ms;
+}
+
+header ul li {
+  list-style: none;
+  margin: 20px 0;
+}
+
+header ul li a {
+  text-decoration: none;
+  font-family: "IBM Plex Mono";
+  font-weight: 600;
+  padding: 10px 30px;
+  font-size: 1rem;
+  color: black;
+  transition: 250ms ease-in-out;
+}
+
+header ul li a:hover {
+  color: var(--blue-dark);
+  border-bottom: 3px solid #000000;
+}
+
+.menu-hamburger {
+  background: url(/Assets/Images/hamburger.png);
+  width: 25px;
+  height: 25px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  transition: 250ms ease-in-out;
+}
+
+.hamburger-off {
+  padding: 9px;
+  background: url(/Assets/Images/hamburgerclose.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  transition: 250ms ease-in-out;
+}
+
+@media screen and (min-width: 700px) {
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    position: unset;
+    width: auto;
+    background: none;
+  }
+
+  header ul {
+    display: flex;
+  }
+
+  header ul li {
+    margin: 0;
+  }
+
+  header ul li a {
+    padding: 0;
+    margin: 5px 10px;
+    font-size: 1.2em;
+  }
+
+  .logo {
+    font-size: 1.8em;
+  }
+  .menu-hamburger {
+    display: none;
+  }
+}
+
+/* showcase */
+
+.mainback {
+  width: 100vw;
+  height: 100vh;
+  background: #ebe7e4;
+  /* background-image: url("https://images.pexels.com/photos/3028961/pexels-photo-3028961.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"); */
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.secondary {
+  height: 100vh;
+}
+
+/* FOOTER */
+footer {
+  color: beige;
+  background-color: rgb(0, 0, 0);
   height: 20vh;
-  margin: 0;
 }
+/* FOOTER END */
+
+/* TYPING */
+.typing-text {
+  width: 15rem;
+  animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  padding-right: 1rem;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 2em;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* MAIN END */
+
+/* GKJ START */
