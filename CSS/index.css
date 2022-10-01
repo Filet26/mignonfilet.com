@@ -16,8 +16,7 @@ html {
 
 body {
   /* font-family: "Roboto", sans-serif; */
-  overflow: overlay;
-  height: 150vh;
+  height: 100vh;
 }
 
 /* .progressH1 {
@@ -49,7 +48,7 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgba(253, 253, 253, 0.512);
+  background: rgba(0, 0, 0, 0.912);
   border-radius: 2rem;
 }
 
@@ -75,12 +74,13 @@ header {
 
 .sticky {
   background: rgba(255, 255, 255, 0.75);
-  box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.723);
+  box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.223);
   backdrop-filter: blur(20px);
+  height: 6vh;
 }
 
 .sticky a {
-  color: var(--grey);
+  z-index: 2;
 }
 
 .stick .logo {
@@ -88,7 +88,11 @@ header {
 }
 
 .sticky li a:hover {
-  color: var(--blue-dark);
+  font: optional;
+}
+
+.nav-link {
+  font-size: 2vh;
 }
 
 .nav-links {
@@ -104,6 +108,7 @@ header {
   justify-content: center;
   align-items: center;
   animation: menu_animation 250ms ease-in-out;
+  z-index: 3;
 }
 
 .show-nav-links {
@@ -124,8 +129,8 @@ header {
 
 .logo {
   text-decoration: none;
-  font-family: "Montserrat";
-  font-size: 2rem;
+  font-family: "IBM Plex Mono";
+  font-size: 1.7rem;
   font-weight: 700;
   color: black;
   transition: 250ms;
@@ -148,7 +153,6 @@ header ul li a {
 
 header ul li a:hover {
   color: var(--blue-dark);
-  border-bottom: 3px solid #000000;
 }
 
 .menu-hamburger {
@@ -183,6 +187,29 @@ header ul li a:hover {
     background: none;
   }
 
+  header ul li a:hover {
+    color: var(--blue-dark);
+  }
+  header ul li a {
+    display: inline-block;
+    color: #000;
+    text-decoration: none;
+  }
+
+  header ul li a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #000;
+    transition: width 0.3s;
+  }
+
+  header ul li a:hover::after {
+    width: 100%;
+    transition: width 0.3s;
+  }
+
   header ul {
     display: flex;
   }
@@ -203,6 +230,17 @@ header ul li a:hover {
   .menu-hamburger {
     display: none;
   }
+
+  #meatbuttongrow,
+  #meatbuttonsmall {
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 1rem;
+  }
+
+  .typing-text {
+    width: 23rem;
+  }
 }
 
 /* showcase */
@@ -217,10 +255,50 @@ header ul li a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .secondary {
   height: 100vh;
+  background-color: #dbfe87;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+/* MEAT */
+
+#meatbuttongrow,
+#meatbuttonsmall {
+  padding: 0.5rem;
+  font-family: "IBM Plex Mono", Courier, monospace;
+  font-size: 1.5rem;
+  border-radius: 1rem;
+}
+
+#meatpic {
+  width: 200px;
+  max-width: 100%;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 40vh;
+  border: 1px solid black;
+  margin: 1rem;
+}
+
+.meat-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  width: 45vh;
+  height: 50vh;
 }
 
 /* FOOTER */
@@ -233,6 +311,7 @@ footer {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  padding: 1rem;
 }
 
 footer a {
@@ -241,11 +320,16 @@ footer a {
   color: #ffffff;
   justify-content: center;
   border: 1px solid wheat;
-  border-radius: 1rem;
+  border-radius: 0.2rem;
   padding: 0.5rem;
+  font-size: 0.7rem;
 }
 
 .break {
+  width: 100%;
+}
+
+.break2 {
   width: 100%;
 }
 
@@ -262,7 +346,7 @@ footer p {
 
 /* TYPING */
 .typing-text {
-  width: 19rem;
+  width: 17rem;
   animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
