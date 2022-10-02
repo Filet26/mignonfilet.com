@@ -36,7 +36,7 @@ grow_btn.addEventListener("click", function onClick() {
 });
 
 shrink_btn.addEventListener("click", function onClick() {
-  if (size > 100) {
+  if (size > 20) {
     size -= 20;
     meatimg.style.width = `${size}px`;
   }

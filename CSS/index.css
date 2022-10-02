@@ -17,6 +17,7 @@ html {
 body {
   /* font-family: "Roboto", sans-serif; */
   height: 100vh;
+  overflow-x: hidden;
 }
 
 /* .progressH1 {
@@ -183,7 +184,7 @@ header ul li a:hover {
 .mainback {
   width: 100vw;
   height: 100vh;
-  background: #83e8ba;
+  background: #52dee5;
   /* background-image: url("https://images.pexels.com/photos/3028961/pexels-photo-3028961.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"); */
   background-size: cover;
 
