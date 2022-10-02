@@ -19,15 +19,6 @@ body {
   height: 100vh;
 }
 
-/* .progressH1 {
-  color: rgb(0, 0, 0);
-  background-color: rgb(255, 255, 255);
-  padding: 1rem;
-  border: 3px solid #c3ff00;
-
-
-
-/* HIGHLIGHT */
 ::selection {
   background: #ffffff; /* WebKit/Blink Browsers */
 }
@@ -58,7 +49,6 @@ body {
   transition: 1s;
 }
 /* Scroll Bar END =====================================*/
-
 /* Navbar */
 header {
   display: flex;
@@ -178,63 +168,6 @@ header ul li a:hover {
   transition: 250ms ease-in-out;
 }
 
-/* showcase */
-
-.mainback {
-  width: 100vw;
-  height: 100vh;
-  background: #83e8ba;
-  /* background-image: url("https://images.pexels.com/photos/3028961/pexels-photo-3028961.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"); */
-  background-size: cover;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.secondary {
-  height: 100vh;
-  background-color: #dbfe87;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  align-content: center;
-}
-
-/* MEAT */
-
-#meatbuttongrow,
-#meatbuttonsmall {
-  padding: 0.5rem;
-  font-family: "IBM Plex Mono", Courier, monospace;
-  font-size: 1.5rem;
-  border-radius: 1rem;
-  margin: 1rem;
-}
-
-#meatpic {
-  width: 200px;
-  max-width: 100%;
-}
-
-.buttons {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 40vh;
-  margin: 1rem;
-}
-
-.meat-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 45vh;
-  height: 50vh;
-}
-
 /* FOOTER */
 footer {
   color: rgb(255, 255, 255);
@@ -279,31 +212,30 @@ footer p {
 
 /* FOOTER END */
 
-/* TYPING */
-.typing-text {
-  width: 17rem;
-  animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
-  white-space: nowrap;
-  overflow: hidden;
-  padding-right: 1rem;
-  border-right: 3px solid;
-  font-family: monospace;
-  font-size: 2em;
+/* showcase */
+
+.mainback {
+  width: 100vw;
+  height: 100vh;
+  background: #ebe7e4;
+  /* background-image: url("https://images.pexels.com/photos/3028961/pexels-photo-3028961.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"); */
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-@keyframes typing {
-  from {
-    width: 0;
-  }
+.secondary {
+  height: 100vh;
+  background-color: #dbfe87;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
 }
-
-@keyframes blink {
-  50% {
-    border-color: transparent;
-  }
-}
-
-/* MAIN END */
 
 /* GKJ START */
 @media screen and (min-width: 700px) {
