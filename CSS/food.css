@@ -225,16 +225,63 @@ footer p {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  font-family: "IBM Plex Mono";
 }
 
 .secondary {
-  height: 100vh;
+  min-height: 100vh;
   background-color: #dbfe87;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   align-content: center;
+}
+
+/* Food cards */
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 300px;
+  margin: 10px;
+  background-color: #ffffff;
+  border-radius: 1rem;
+}
+
+.card-img img {
+  width: 100%;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.card-body p {
+  text-align: justify;
+  margin-bottom: 10px;
+  padding: 5px;
+  font-family: "IBM Plex Mono";
+}
+
+.card-footer button {
+  width: 150px;
+  background: black;
+  color: #ffffff;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* GKJ START */
