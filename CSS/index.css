@@ -204,12 +204,30 @@ header ul li a:hover {
   align-content: center;
 }
 
+.third {
+  height: 100vh;
+  background-color: #cb517e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 40vh;
+  margin: 1rem;
+}
+
 /* MEAT */
 
 #meatbuttongrow,
 #meatbuttonsmall {
   padding: 0.5rem;
-  font-family: "IBM Plex Mono", Courier, monospace;
+  font-family: "IBM Plex Mono", Courier;
   font-size: 1.5rem;
   border-radius: 1rem;
   margin: 1rem;
@@ -220,12 +238,19 @@ header ul li a:hover {
   max-width: 100%;
 }
 
-.buttons {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 40vh;
+/* Burger */
+#rotate-right,
+#rotate-left {
+  padding: 0.5rem;
+  font-family: "IBM Plex Mono", Courier;
+  font-size: 1.5rem;
+  border-radius: 1rem;
   margin: 1rem;
+}
+
+#burger {
+  width: 200px;
+  max-width: 100%;
 }
 
 .meat-container {
@@ -306,7 +331,6 @@ footer p {
 
 /* MAIN END */
 
-/* GKJ START */
 @media screen and (min-width: 700px) {
   .nav-links {
     display: flex;
@@ -361,10 +385,17 @@ footer p {
   }
 
   #meatbuttongrow,
-  #meatbuttonsmall {
+  #meatbuttonsmall,
+  #rotate-right,
+  #rotate-left {
     padding: 1rem;
     font-size: 1rem;
     border-radius: 1rem;
+  }
+
+  #burger {
+    width: 300px;
+    max-width: 100%;
   }
 
   .typing-text {

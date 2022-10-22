@@ -194,6 +194,7 @@ footer a {
 
 .break {
   width: 100%;
+  height: 1px;
 }
 
 .break2 {
@@ -220,7 +221,6 @@ footer p {
   background: #ebe7e4;
   /* background-image: url("https://images.pexels.com/photos/3028961/pexels-photo-3028961.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"); */
   background-size: cover;
-
   display: flex;
   justify-content: center;
   align-items: center;

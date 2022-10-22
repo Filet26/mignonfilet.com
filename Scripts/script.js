@@ -41,3 +41,21 @@ shrink_btn.addEventListener("click", function onClick() {
     meatimg.style.width = `${size}px`;
   }
 });
+
+// Buttoons for meat spin
+const right = document.getElementById("rotate-right");
+const left = document.getElementById("rotate-left");
+
+const burger_img = document.getElementById("burger");
+
+let angle = 0;
+
+right.addEventListener("click", function onClick() {
+  angle -= 20;
+  burger_img.style.transform = `rotate(${angle}deg)`;
+});
+
+left.addEventListener("click", function onClick() {
+  angle += 20;
+  burger_img.style.transform = `rotate(${angle}deg)`;
+});
