@@ -51,11 +51,11 @@ const burger_img = document.getElementById("burger");
 let angle = 0;
 
 right.addEventListener("click", function onClick() {
-  angle -= 20;
+  angle += 20;
   burger_img.style.transform = `rotate(${angle}deg)`;
 });
 
 left.addEventListener("click", function onClick() {
-  angle += 20;
+  angle -= 20;
   burger_img.style.transform = `rotate(${angle}deg)`;
 });
