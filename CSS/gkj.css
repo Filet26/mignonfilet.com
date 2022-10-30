@@ -183,7 +183,7 @@ header ul li a:hover {
 .mainback {
   width: 100vw;
   height: 100vh;
-  background: #52dee5;
+  background: #c7efcf;
   /* background-image: url("https://images.pexels.com/photos/3028961/pexels-photo-3028961.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"); */
   background-size: cover;
 
@@ -191,7 +191,6 @@ header ul li a:hover {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  padding-top: 4rem;
 }
 
 .secondary {
@@ -202,6 +201,7 @@ header ul li a:hover {
   align-items: center;
   flex-wrap: wrap;
   align-content: center;
+  padding: 2rem;
 }
 
 .third {
@@ -228,6 +228,10 @@ header ul li a:hover {
   max-height: 100%;
   border: 0.5rem solid black;
   max-width: 90%;
+}
+
+.mainback h1 {
+  font-family: "IBM Plex Mono";
 }
 
 /* FOOTER */

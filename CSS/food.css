@@ -219,7 +219,7 @@ footer p {
 .mainback {
   width: 100vw;
   height: 100vh;
-  background: #ebe7e4;
+  background: #f1d302;
 
   display: flex;
   justify-content: center;
@@ -242,12 +242,14 @@ footer p {
 /* Food intro */
 .mainback h1 {
   font-size: 1.5rem;
+  border: 2px solid #000000;
+  padding: 1rem;
 }
 
 .mainback p {
   padding: 2rem;
   text-align: center;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-family: "Montserrat";
   line-height: 2rem;
 }
@@ -263,7 +265,7 @@ footer p {
 }
 
 .card {
-  width: 300px;
+  width: 250px;
   margin: 10px;
   background-color: #ffffff;
   border-radius: 1rem;
@@ -375,5 +377,14 @@ footer p {
 
   .copyright {
     font-size: 1rem;
+  }
+
+  .mainback h1 {
+    font-size: 2rem;
+  }
+
+  .mainback p {
+    font-size: 1.5rem;
+    line-height: 3rem;
   }
 }
