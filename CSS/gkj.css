@@ -212,6 +212,7 @@ header ul li a:hover {
   align-items: center;
   flex-wrap: wrap;
   align-content: center;
+  padding: 2rem;
 }
 
 .buttons {
@@ -229,8 +230,21 @@ header ul li a:hover {
   border: 0.5rem solid black;
   max-width: 90%;
 }
+.mattdrip {
+  max-height: 100%;
+  border: 0.5rem solid #000;
+  max-width: 90%;
+}
 
 .mainback h1 {
+  font-family: "IBM Plex Mono";
+}
+
+.secondary h2 {
+  font-family: "IBM Plex Mono";
+}
+
+.third h2 {
   font-family: "IBM Plex Mono";
 }
 
